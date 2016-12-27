@@ -1,6 +1,18 @@
 FROM php:7.0
 
-# Install git, the php image doesn't have installed
+# this image adds additional software to default php image
+# to allow ci tests run faster
+#
+# additional software :
+#  - nodejs/npm
+#  - ruby/gem
+#  - autotools (automake/autoconf)
+#  - phnatomjs (headless webbrowser for testing)
+#  - git/wget/curl etc
+
+
+MAINTAINER Oleksii Prudkyi <oleksii.prudkyi@gmail.com>
+
 RUN apt-get update -yqq
 
 RUN apt-get install git curl \
