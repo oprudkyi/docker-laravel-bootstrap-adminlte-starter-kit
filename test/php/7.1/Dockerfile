@@ -22,7 +22,7 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
 RUN apt-get install git curl \
         zip wget tar \
-        npm nodejs-legacy ruby ruby-dev \
+        nodejs-legacy ruby ruby-dev \
         libtool \
         automake autoconf \
         libmemcached-dev  \
@@ -35,7 +35,7 @@ RUN apt-get install git curl \
         libxml2-dev \
         libsqlite3-dev \
         fontconfig libicu-dev libfontconfig1 \
-        libmcrypt-dev -yqq
+        libmcrypt-dev -y
 
 # Install php extensions
 RUN docker-php-ext-install mcrypt
