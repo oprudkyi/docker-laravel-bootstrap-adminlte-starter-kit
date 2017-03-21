@@ -15,6 +15,11 @@ MAINTAINER Oleksii Prudkyi <oleksii.prudkyi@gmail.com>
 
 RUN apt-get update -yqq
 
+RUN apt-get install curl \
+        -yqq
+
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+
 RUN apt-get install git curl \
         zip wget tar \
         npm nodejs-legacy ruby ruby-dev \
