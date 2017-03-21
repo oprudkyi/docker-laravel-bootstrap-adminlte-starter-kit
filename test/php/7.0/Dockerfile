@@ -21,7 +21,7 @@ RUN apt-get install curl \
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
 RUN apt-get install git \
-        zip wget tar \
+        zip bzip2 wget tar \
         nodejs ruby ruby-dev \
         libtool \
         automake autoconf \
