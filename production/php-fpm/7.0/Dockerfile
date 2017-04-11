@@ -26,7 +26,7 @@ RUN apt-get update -yqq \
 				libpng12-0 \
 				libpq5 \
         " \
-		&& apt-get install -y zip bzip2 wget tar $buildDeps --no-install-recommends \
+		&& apt-get install -y zip bzip2 wget tar less $buildDeps --no-install-recommends \
         && rm -r /var/lib/apt/lists/* \
         \
 		&& docker-php-ext-install mcrypt zip pdo_mysql opcache \
