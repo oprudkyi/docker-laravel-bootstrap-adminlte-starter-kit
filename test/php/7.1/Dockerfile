@@ -49,6 +49,7 @@ RUN apt-get update -yqq \
 			automake autoconf \
 			fontconfig libicu-dev libfontconfig1 \
 			libsqlite3-dev \
+			openssh-client \
 			$buildDeps --no-install-recommends \
         && rm -r /var/lib/apt/lists/* \
         \
