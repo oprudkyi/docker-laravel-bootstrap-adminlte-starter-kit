@@ -25,7 +25,6 @@ RUN apt-get update -yqq \
 			libpng12-dev  \
 			libfreetype6-dev  \
 			libmcrypt-dev \
-			libsqlite3-dev \
         " \
         && doNotUninstall=" \
                 libmemcached11 \
@@ -43,13 +42,13 @@ RUN apt-get update -yqq \
 				libicu52  libkadm5clnt-mit9 libkadm5srv-mit9 libkdb5-7 \
 				libpsl0 libruby2.1 libyaml-0-2 ruby2.1 ruby2.1-dev rubygems-integration ucf \
 				krb5-multidev libgssrpc4 \
-				libsqlite3-dev \
         " \
 		&& apt-get install -y git zip bzip2 wget tar less \ 
 			nodejs ruby ruby-dev \
 			libtool \
 			automake autoconf \
 			fontconfig libicu-dev libfontconfig1 \
+			libsqlite3-dev \
 			$buildDeps --no-install-recommends \
         && rm -r /var/lib/apt/lists/* \
         \
